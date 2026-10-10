@@ -1,0 +1,11 @@
+[
+  { "servicio": "GDB", "capa": 15, "archivo": "muestras_plm.geojson", "esperado": 232 },
+  { "servicio": "GDB", "capa": 28, "archivo": "muestras_aire.geojson", "esperado": 36 },
+  { "servicio": "GDB", "capa": 24, "archivo": "muestras_mcv.geojson", "esperado": 114 },
+  { "servicio": "GDB", "capa": 0, "archivo": "agua_teja.geojson", "esperado": 40 },
+  { "servicio": "GDB", "capa": 30, "archivo": "agua_grifo.geojson", "esperado": 64 },
+  { "servicio": "GDB", "capa": 27, "archivo": "agua_tanque.geojson", "esperado": 28 },
+  { "servicio": "GDB", "capa": 31, "archivo": "tuberia_ac.geojson", "esperado": 1472 },
+  { "servicio": "GDB", "capa": 33, "archivo": "limite_departamento.geojson", "esperado": 1 },
+  { "servicio": "GDB", "capa": 34, "archivo": "limite_aeropuerto.geojson", "esperado": 1 }
+]

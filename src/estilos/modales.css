@@ -1,0 +1,54 @@
+.modal {
+  margin: auto;
+  width: min(640px, calc(100% - 24px));
+  max-height: calc(100% - 40px);
+  border: 1px solid var(--linea);
+  border-radius: var(--radio);
+  background: #fff;
+  color: var(--texto);
+  box-shadow: 0 24px 60px rgba(20, 40, 58, 0.28);
+  overflow: hidden;
+}
+.modal[open] { display: grid; grid-template-columns: 14px 1fr; animation: modal-entrar var(--t-media) var(--curva); }
+.modal::backdrop { background: rgba(20, 40, 58, 0.42); animation: aparecer var(--t-media) var(--curva); }
+
+.modal__rayas {
+  background: repeating-linear-gradient(135deg, var(--fondo) 0, var(--fondo) 3px, var(--rayas) 3px, var(--rayas) 4px);
+  border-right: 3px solid var(--acento);
+}
+.modal__cuerpo { padding: 26px 28px 24px; overflow: auto; max-height: calc(100vh - 40px); }
+.modal__cabeza { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+.modal__rotulo { font-size: 10.5px; font-weight: 700; letter-spacing: 2.4px; text-transform: uppercase; color: var(--texto-suave); }
+.modal h2 { margin-top: 6px; font-size: 24px; font-weight: 800; letter-spacing: 0.3px; line-height: 1.2; }
+.modal__cabeza h2 { margin-top: 0; }
+.modal__intro { margin-top: 10px; font-size: 14.5px; line-height: 1.6; color: var(--texto-suave); max-width: 52ch; }
+.modal__acciones { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+
+.cifras { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; margin-top: 22px; background: var(--linea); border: 1px solid var(--linea); border-radius: var(--radio); overflow: hidden; }
+.cifra { display: flex; flex-direction: column-reverse; justify-content: flex-end; gap: 4px; padding: 14px 12px; background: var(--panel); }
+.cifra dd { font-size: 28px; font-weight: 800; color: var(--acento); font-variant-numeric: tabular-nums; line-height: 1; }
+.cifra dt { font-size: 11.5px; line-height: 1.35; color: var(--texto-suave); }
+
+.modal--bienvenida .cifra { animation: subir var(--t-lenta) var(--curva) both; }
+.modal--bienvenida .cifra:nth-child(2) { animation-delay: 80ms; }
+.modal--bienvenida .cifra:nth-child(3) { animation-delay: 160ms; }
+.modal--bienvenida .cifra:nth-child(4) { animation-delay: 240ms; }
+
+/* ---------- Acerca del geovisor ---------- */
+
+.acerca { font-size: 14px; line-height: 1.6; }
+.acerca h3 { margin: 18px 0 6px; font-size: 11.5px; font-weight: 700; letter-spacing: 1.6px; text-transform: uppercase; color: var(--texto-suave); }
+.acerca p + p { margin-top: 8px; }
+.acerca ul { padding-left: 18px; }
+.acerca li + li { margin-top: 4px; }
+.acerca .publicaciones { list-style: none; padding: 0; display: grid; gap: 6px; font-size: 13px; }
+.acerca .publicaciones li { padding: 8px 10px; background: var(--panel); border-left: 3px solid var(--rayas); border-radius: 2px; }
+.acerca .publicaciones span { display: block; font-size: 11.5px; color: var(--texto-suave); }
+.acerca .cita { padding: 10px 12px; background: var(--panel); border: 1px dashed var(--linea); font-size: 12.5px; }
+.acerca a { color: var(--acento); }
+
+@media (max-width: 760px) {
+  .cifras { grid-template-columns: repeat(2, 1fr); }
+  .modal__cuerpo { padding: 20px 18px; }
+  .modal h2 { font-size: 20px; }
+}

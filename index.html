@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Geovisor Asbesto Cartagena</title>
+  <meta name="description" content="Geovisor público con la información de asbesto en Cartagena de Indias: cubiertas y redes de asbesto-cemento, polvo, aire y agua. Proyecto BPIN 2020000100366, Universidad de Cartagena y FUNDCLAS.">
+  <meta name="theme-color" content="#2f5877">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Geovisor Asbesto · Cartagena de Indias">
+  <meta property="og:description" content="Cubiertas y redes de asbesto-cemento, polvo, aire y agua en Cartagena. Proyecto BPIN 2020000100366.">
+  <meta property="og:image" content="/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <a class="saltar" href="#mapa">Saltar al mapa</a>
+
+  <header class="encabezado">
+    <div class="encabezado__fila">
+      <div class="encabezado__rayas" aria-hidden="true"></div>
+      <div class="encabezado__titulo">
+        <div class="encabezado__lugar">Cartagena de Indias</div>
+        <h1>Geovisor <strong>Asbesto</strong></h1>
+      </div>
+      <div class="encabezado__sistema">Sistema de<br>Información Geográfica</div>
+      <div class="encabezado__acciones" id="acciones">
+        <button class="accion" type="button" id="boton-acerca" title="Acerca del geovisor" aria-label="Acerca del geovisor">
+          <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="7.5"/><path d="M10 9v5M10 6.2v.1"/></svg>
+        </button>
+        <button class="accion" type="button" id="boton-compartir" title="Compartir" aria-label="Compartir enlace de esta vista">
+          <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="5" cy="10" r="2.2"/><circle cx="15" cy="5" r="2.2"/><circle cx="15" cy="15" r="2.2"/><path d="M7 9l6-3M7 11l6 3"/></svg>
+        </button>
+        <button class="accion" type="button" id="boton-exportar" title="Exportar" aria-label="Exportar imagen del mapa">
+          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 3v9M6 8.5l4 4 4-4M4 15.5h12"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="contenido">
+    <aside class="panel" aria-label="Panel de información">
+      <div class="pestanas" role="tablist" aria-label="Contenido del panel">
+        <button class="pestana" role="tab" aria-selected="true" data-seccion="capas">Capas de información</button>
+        <button class="pestana" role="tab" aria-selected="false" data-seccion="leyenda">Leyenda</button>
+      </div>
+      <section class="seccion" id="seccion-capas" role="tabpanel">
+        <h2 class="visualmente-oculto">Capas de información</h2>
+        <div id="lista-capas"><p class="vacio">Cargando capas…</p></div>
+      </section>
+      <section class="seccion" id="seccion-leyenda" role="tabpanel" hidden>
+        <h2 class="visualmente-oculto">Leyenda</h2>
+        <div id="leyenda"></div>
+      </section>
+      <div class="panel__pie">
+        <button class="boton boton--primario" type="button" id="boton-recorrido">
+          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M6 4.5v11l9-5.5z"/></svg>
+          Ver recorrido guiado
+        </button>
+        <p class="panel__credito">Proyecto BPIN 2020000100366 — Universidad de Cartagena · FUNDCLAS</p>
+      </div>
+    </aside>
+
+    <main class="mapa-zona">
+      <div id="mapa" aria-label="Mapa interactivo de asbesto en Cartagena" tabindex="0"></div>
+      <div class="buscador" id="buscador"></div>
+      <div class="pista" id="pista" role="status">Haga clic sobre una entidad del mapa para consultar sus datos.</div>
+      <div class="medida" id="medida" role="status" hidden></div>
+      <section class="panel-barrio" id="panel-barrio" hidden aria-live="polite"></section>
+      <section class="recorrido" id="recorrido" hidden aria-live="polite" aria-label="Recorrido guiado"></section>
+      <div class="aviso" id="aviso" role="status" aria-live="polite"></div>
+      <div class="cargando" id="cargando" aria-hidden="true"><span></span></div>
+    </main>
+  </div>
+
+  <dialog class="modal modal--bienvenida" id="bienvenida" aria-labelledby="bienvenida-titulo">
+    <div class="modal__rayas" aria-hidden="true"></div>
+    <div class="modal__cuerpo">
+      <p class="modal__rotulo">Cartagena de Indias · Proyecto BPIN 2020000100366</p>
+      <h2 id="bienvenida-titulo">Asbesto en el entorno urbano</h2>
+      <p class="modal__intro">Este geovisor permite visualizar y consultar la información georreferenciada sobre materiales con asbesto en Cartagena: cubiertas y redes de asbesto-cemento, polvo superficial, aire y agua.</p>
+      <dl class="cifras">
+        <div class="cifra"><dt>muestras ambientales analizadas</dt><dd data-contador="muestras">0</dd></div>
+        <div class="cifra"><dt>barrios caracterizados</dt><dd data-contador="barrios">0</dd></div>
+        <div class="cifra"><dt>km de tubería de asbesto-cemento</dt><dd data-contador="tuberia">0</dd></div>
+        <div class="cifra"><dt>km² de cubiertas de asbesto-cemento</dt><dd data-contador="cubiertas">0</dd></div>
+      </dl>
+      <div class="modal__acciones">
+        <button class="boton boton--primario" type="button" data-accion="recorrido">Ver recorrido guiado</button>
+        <button class="boton" type="button" data-accion="explorar">Explorar el mapa</button>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog class="modal modal--acerca" id="acerca" aria-labelledby="acerca-titulo">
+    <div class="modal__rayas" aria-hidden="true"></div>
+    <div class="modal__cuerpo">
+      <div class="modal__cabeza">
+        <h2 id="acerca-titulo">Acerca del geovisor</h2>
+        <button class="boton-icono" type="button" data-accion="cerrar" aria-label="Cerrar">
+          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 5l10 10M15 5L5 15"/></svg>
+        </button>
+      </div>
+      <div class="acerca" id="acerca-contenido"></div>
+    </div>
+  </dialog>
+
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
