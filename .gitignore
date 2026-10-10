@@ -3,3 +3,6 @@ dist
 .vercel
 *.mbtiles
 tmp
+
+.vercel
+.env*
