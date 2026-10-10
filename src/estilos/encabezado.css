@@ -1,0 +1,82 @@
+/* Encabezado "fibras" del traspaso: estructura y medidas conservadas. */
+.encabezado {
+  flex: 0 0 auto;
+  position: relative;
+  z-index: 5;
+  background: var(--fondo);
+  border-bottom: 3px solid var(--acento);
+}
+
+.encabezado__fila { display: flex; align-items: stretch; min-height: var(--alto-encabezado); }
+
+.encabezado__rayas {
+  flex: 0 0 56px;
+  background: repeating-linear-gradient(135deg, var(--fondo) 0, var(--fondo) 3px, var(--rayas) 3px, var(--rayas) 4px);
+  background-size: 200% 100%;
+  border-right: 1px solid var(--rayas);
+}
+
+.encabezado__titulo { padding: 9px 20px; align-self: center; }
+
+.encabezado__lugar {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--texto-suave);
+}
+
+.encabezado h1 {
+  font-size: 21px;
+  font-weight: 400;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  line-height: 1.15;
+}
+
+.encabezado h1 strong { font-weight: 800; }
+
+.encabezado__sistema {
+  margin-left: auto;
+  align-self: center;
+  padding: 0 24px 0 22px;
+  text-align: right;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--texto-suave);
+  line-height: 1.5;
+  border-left: 1px solid var(--linea);
+}
+
+/* Bloque azul acero de 120 px para Compartir y Exportar (íconos blancos) */
+.encabezado__acciones {
+  flex: 0 0 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  background: var(--acento);
+}
+
+.accion {
+  display: grid; place-items: center;
+  width: 34px; height: 34px;
+  border: 0; border-radius: var(--radio);
+  background: transparent; color: var(--blanco);
+  cursor: pointer;
+  transition: background var(--t-rapida) var(--curva);
+}
+.accion:hover { background: rgba(255, 255, 255, 0.14); }
+.accion:active { background: rgba(255, 255, 255, 0.22); }
+.accion:focus-visible { outline-color: var(--blanco); }
+.accion svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+
+@media (max-width: 760px) {
+  .encabezado__rayas { flex-basis: 32px; }
+  .encabezado__titulo { padding: 8px 12px; }
+  .encabezado h1 { font-size: 16px; letter-spacing: 2px; }
+  .encabezado__sistema { display: none; }
+  .encabezado__acciones { flex-basis: auto; padding: 0 6px; margin-left: auto; }
+}

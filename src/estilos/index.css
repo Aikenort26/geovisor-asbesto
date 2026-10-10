@@ -1,0 +1,8 @@
+@import 'maplibre-gl/dist/maplibre-gl.css';
+@import './tokens.css';
+@import './base.css';
+@import './encabezado.css';
+@import './panel.css';
+@import './mapa.css';
+@import './modales.css';
+@import './animaciones.css';

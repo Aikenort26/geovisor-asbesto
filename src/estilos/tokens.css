@@ -1,0 +1,25 @@
+/* Tokens del traspaso (variante "fibras"); los nombres se conservan para continuidad con el equipo. */
+:root {
+  --fondo: #d9e1e8;
+  --rayas: #8499ab;
+  --linea: #b2c0cc;
+  --texto: #14283a;
+  --texto-suave: #3b5266;
+  --acento: #2f5877;
+  --acento-oscuro: #264a66;
+  --panel: #f3f6f8;
+  --blanco: #ffffff;
+  --alerta: #b23a26;
+
+  --fuente: 'Segoe UI', 'Segoe UI Variable Text', system-ui, -apple-system, Arial, sans-serif;
+  --ancho-panel: 340px;
+  --alto-encabezado: 56px;
+  --radio: 3px;
+  --sombra-1: 0 1px 2px rgba(20, 40, 58, 0.12), 0 1px 1px rgba(20, 40, 58, 0.06);
+  --sombra-2: 0 6px 18px rgba(20, 40, 58, 0.16), 0 2px 4px rgba(20, 40, 58, 0.08);
+
+  --t-rapida: 150ms;
+  --t-media: 300ms;
+  --t-lenta: 600ms;
+  --curva: cubic-bezier(0.22, 0.61, 0.36, 1);
+}

@@ -1,0 +1,26 @@
+{
+  "name": "geovisor-asbesto",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "datos": "node scripts/descargar-arcgis.mjs"
+  },
+  "dependencies": {
+    "@turf/area": "^7.4.0",
+    "@turf/length": "^7.4.0",
+    "maplibre-gl": "^5.24.0",
+    "pmtiles": "^4.5.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.5",
+    "jsdom": "^25.0.1",
+    "typescript": "^5.9.3",
+    "vite": "^6.4.4",
+    "vitest": "^3.2.7"
+  }
+}

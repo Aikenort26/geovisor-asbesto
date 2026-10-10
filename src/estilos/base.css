@@ -1,0 +1,57 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body { height: 100%; }
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--fuente);
+  color: var(--texto);
+  background: var(--panel);
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden;
+}
+
+button { font: inherit; color: inherit; }
+
+:focus-visible { outline: 2px solid var(--acento); outline-offset: 2px; }
+
+.visualmente-oculto {
+  position: absolute; width: 1px; height: 1px; overflow: hidden;
+  clip: rect(0 0 0 0); white-space: nowrap;
+}
+
+.saltar {
+  position: absolute; left: 8px; top: -40px; z-index: 50;
+  padding: 8px 12px; background: var(--acento); color: var(--blanco); border-radius: var(--radio);
+}
+.saltar:focus { top: 8px; }
+
+.boton {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  padding: 9px 16px;
+  border: 1px solid var(--linea);
+  border-radius: var(--radio);
+  background: var(--blanco);
+  font-size: 13px; font-weight: 600; letter-spacing: 0.4px;
+  cursor: pointer;
+  transition: background var(--t-rapida) var(--curva), border-color var(--t-rapida) var(--curva), transform var(--t-rapida) var(--curva);
+}
+.boton:hover { border-color: var(--rayas); background: #f7f9fb; }
+.boton:active { transform: translateY(1px); }
+.boton:disabled { opacity: 0.45; cursor: default; transform: none; }
+.boton svg { width: 14px; height: 14px; fill: currentColor; }
+.boton--primario { background: var(--acento); border-color: var(--acento); color: var(--blanco); }
+.boton--primario:hover { background: var(--acento-oscuro); border-color: var(--acento-oscuro); }
+
+.boton-icono {
+  display: inline-grid; place-items: center;
+  width: 32px; height: 32px;
+  border: 0; border-radius: var(--radio); background: transparent;
+  color: var(--texto-suave); cursor: pointer;
+  transition: background var(--t-rapida) var(--curva), color var(--t-rapida) var(--curva);
+}
+.boton-icono:hover { background: var(--fondo); color: var(--texto); }
+.boton-icono svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; }
+
+.vacio { font-size: 13px; line-height: 1.5; color: var(--texto-suave); }
