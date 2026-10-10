@@ -154,7 +154,12 @@
 .recorrido__nav .espacio { flex: 1; }
 
 @media (max-width: 760px) {
-  .buscador { width: calc(100% - 62px); }
+  .buscador { width: calc(100% - 20px); }
+  .maplibregl-ctrl-top-right { top: 50px; }
+  .maplibregl-ctrl-group:has(.maplibregl-ctrl-fullscreen),
+  .maplibregl-ctrl-group:has(.maplibregl-ctrl-geolocate) { display: none; }
+  .pista { bottom: 44px; }
+  .medida { bottom: 84px; }
   .panel-barrio__tarjetas { grid-template-columns: repeat(3, 1fr); }
   .panel-barrio__muestras li { grid-template-columns: 1.4fr 1fr auto auto auto; }
   .pista { font-size: 11.5px; white-space: normal; text-align: center; width: max-content; max-width: calc(100% - 24px); }

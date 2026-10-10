@@ -76,7 +76,10 @@
 @media (max-width: 760px) {
   .encabezado__rayas { flex-basis: 32px; }
   .encabezado__titulo { padding: 8px 12px; }
-  .encabezado h1 { font-size: 16px; letter-spacing: 2px; }
+  .encabezado__titulo { min-width: 0; }
+  .encabezado h1 { font-size: 14px; letter-spacing: 1px; white-space: nowrap; }
+  .encabezado__lugar { font-size: 9px; letter-spacing: 2px; }
   .encabezado__sistema { display: none; }
-  .encabezado__acciones { flex-basis: auto; padding: 0 6px; margin-left: auto; }
+  .encabezado__acciones { flex: 0 0 auto; gap: 0; padding: 0 4px; margin-left: auto; }
+  .accion { width: 32px; }
 }
