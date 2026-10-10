@@ -106,6 +106,7 @@ export function agregarMapasBase(mapa: MapaML) {
 
 /** Muestra el mapa base elegido. Las capas del estilo vectorial se ocultan bajo los ráster. */
 export function cambiarMapaBase(mapa: MapaML, base: MapaBase, capasEstilo: string[]) {
+  if (!mapa.getLayer('base-calles') || !mapa.getLayer('base-satelite')) return;
   mapa.setLayoutProperty('base-calles', 'visibility', base === 'calles' ? 'visible' : 'none');
   mapa.setLayoutProperty('base-satelite', 'visibility', base === 'satelite' ? 'visible' : 'none');
   for (const id of capasEstilo) {

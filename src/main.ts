@@ -8,7 +8,7 @@ import type { Capa } from './config/capas';
 import { agregarCapas, idsMapa } from './mapa/fuentes';
 import { codificarEstado, decodificarEstado } from './mapa/estado-url';
 import { exportarPNG } from './mapa/exportar';
-import { ControlInicio, ControlMapaBase, ControlMedicion, agregarMapasBase, cambiarMapaBase } from './mapa/controles';
+import { ControlInicio, ControlMapaBase, ControlMedicion, agregarMapasBase, cambiarMapaBase, type MapaBase } from './mapa/controles';
 import { montarPestanas } from './ui/pestanas';
 import { montarListaCapas } from './ui/lista-capas';
 import { montarLeyenda } from './ui/leyenda';
@@ -53,6 +53,9 @@ const mapa = new maplibregl.Map({
   }
 });
 
+if (import.meta.env.DEV) Object.assign(window, { mapa });
+mapa.on('error', (e) => console.error('[mapa]', e.error?.message ?? e));
+
 const aviso = (texto: string) => {
   const el = $('aviso');
   el.textContent = texto;
@@ -63,7 +66,8 @@ const aviso = (texto: string) => {
 const irAlInicio = () =>
   mapa.flyTo({ center: VISTA_INICIAL.centro, zoom: VISTA_INICIAL.zoom, pitch: 0, bearing: 0, duration: duracion(1200), essential: true });
 
-mapa.addControl(new ControlMapaBase((b) => cambiarMapaBase(mapa, b, capasEstilo)), 'top-right');
+let baseActual: MapaBase = 'claro';
+mapa.addControl(new ControlMapaBase((b) => { baseActual = b; cambiarMapaBase(mapa, b, capasEstilo); }), 'top-right');
 mapa.addControl(new maplibregl.NavigationControl({ visualizePitch: true }), 'top-right');
 mapa.addControl(new ControlInicio(irAlInicio), 'top-right');
 mapa.addControl(new maplibregl.FullscreenControl({ container: document.querySelector('.mapa-zona') as HTMLElement }), 'top-right');
@@ -77,6 +81,7 @@ mapa.on('load', async () => {
   capasEstilo = estilo.filter((l) => (l.layout as { visibility?: string } | undefined)?.visibility !== 'none').map((l) => l.id);
   const primeraEtiqueta = estilo.find((l) => l.type === 'symbol')?.id;
   agregarMapasBase(mapa);
+  cambiarMapaBase(mapa, baseActual, capasEstilo);
 
   const { disponibles, faltantes } = await agregarCapas(mapa, capas, primeraEtiqueta);
   $('cargando').classList.add('listo');
