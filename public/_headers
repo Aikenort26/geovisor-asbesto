@@ -1,0 +1,5 @@
+# Netlify: las teselas PMTiles se leen por rangos de bytes
+/tiles/*
+  Accept-Ranges: bytes
+  Cache-Control: public, max-age=604800
+  Access-Control-Allow-Origin: *

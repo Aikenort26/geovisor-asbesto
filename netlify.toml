@@ -1,0 +1,7 @@
+# Despliegue en Netlify conectado al repositorio de GitHub
+[build]
+  command = "npm ci && npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
