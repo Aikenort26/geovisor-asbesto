@@ -146,8 +146,6 @@ Los GeoTIFF originales (1,5 GB) no se versionan.
   <img src="docs/img/actividad.svg" width="100%" alt="Actividad del repositorio: commits y días activos en los últimos 28 días, y commits por tipo (funciones, correcciones, documentación, mantenimiento)">
 </a>
 
-[![Commits por mes](https://img.shields.io/github/commit-activity/m/Aikenort26/geovisor-asbesto?label=commits%20por%20mes&color=3fb950&labelColor=14283a)](https://github.com/Aikenort26/geovisor-asbesto/graphs/commit-activity)
-
 La gráfica se regenera con `python scripts/actividad-readme.py` a partir de `git log`.
 
 ## Historial de estrellas

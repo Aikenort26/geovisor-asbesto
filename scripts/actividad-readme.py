@@ -32,6 +32,7 @@ autores = len({a for _, _, a in commits})
 hoy = date.today()
 inicio = min(date.fromisoformat(d) for d, _, _ in commits)
 dias_activos = len(por_dia)
+este_mes = sum(n for d, n in por_dia.items() if d.startswith(hoy.strftime("%Y-%m")))
 
 partes = []
 add = partes.append
@@ -50,7 +51,7 @@ add(f'<rect width="{W}" height="{H}" fill="{FONDO}"/>')
 # tarjeta izquierda: cifras y calendario de los últimos 28 días
 add(f'<rect x="8" y="8" width="416" height="174" rx="6" fill="{FONDO}" stroke="{BORDE}"/>')
 texto(24, 36, f"{len(commits)} commits · {dias_activos} días activos", "#58a6ff", 15, 600)
-texto(24, 58, f"desde {inicio.isoformat()} · {autores} autor{'es' if autores != 1 else ''}", SUAVE, 12, fuente=MONO)
+texto(24, 58, f"desde {inicio.isoformat()} · {autores} autor{'es' if autores != 1 else ''} · {este_mes} este mes", SUAVE, 12, fuente=MONO)
 maximo = max(por_dia.values())
 lado, paso = 22, 27
 for i in range(DIAS):
