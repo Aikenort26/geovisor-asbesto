@@ -137,7 +137,7 @@ Los GeoTIFF originales (1,5 GB) no se versionan.
 ## Despliegue
 
 - **Vercel:** cada push a `main` publica una nueva versión.
-- **Netlify:** el repositorio trae `netlify.toml` (compilación) y `public/_headers` (lectura por rangos de las teselas). Basta con vincular el repositorio desde Netlify.
+- **Netlify:** espejo en [geovisor-asbesto-ctg.netlify.app](https://geovisor-asbesto-ctg.netlify.app), vinculado a este repositorio; cada push a `main` lo actualiza. El repositorio trae `netlify.toml` (compilación) y `public/_headers` (lectura por rangos de las teselas).
 - **Paquete listo para subir:** en [Releases](https://github.com/Aikenort26/geovisor-asbesto/releases) está el sitio compilado en un `.zip`, para arrastrar a Netlify Drop o a cualquier hosting estático.
 
 ## Actividad del repositorio
