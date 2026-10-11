@@ -41,19 +41,10 @@ Proyecto **BPIN 2020000100366** · Universidad de Cartagena · FUNDCLAS
 
 ## En cifras
 
-| 514 | 189 | 255 km | 11,8 km² | ≈1 millón |
-|:---:|:---:|:---:|:---:|:---:|
-| muestras ambientales analizadas | barrios caracterizados | de tubería de asbesto-cemento | de cubiertas de asbesto-cemento | habitantes en los barrios estudiados |
+<img src="docs/img/panel-datos.svg" width="100%" alt="Panel de cifras: 514 muestras ambientales (335 con asbesto), 189 barrios, 255 km de tubería de asbesto-cemento, 11,8 km² de cubiertas; muestras con asbesto por tipo, distribución de la densidad de tubería por barrio, estructuras de asbesto en polvo superficial y tipos de asbesto identificados">
 
-### Muestras con asbesto detectado, por tipo
-
-```mermaid
-xychart-beta
-    title "Porcentaje de muestras con asbesto detectado"
-    x-axis ["PLM", "Agua de techo", "Polvo (MCV)", "Agua de tanque", "Agua de grifo", "Aire"]
-    y-axis "% de muestras" 0 --> 100
-    bar [87.5, 85.0, 71.9, 28.6, 10.9, 2.8]
-```
+<details>
+<summary><b>Tabla: muestras con asbesto detectado por tipo</b></summary>
 
 | Tipo de muestra | Analizadas | Con asbesto | % |
 |---|---:|---:|---:|
@@ -64,20 +55,23 @@ xychart-beta
 | Agua de grifo | 64 | 7 | 10,9 |
 | Aire (TEM) | 36 | 1 | 2,8 |
 
-### Composición del muestreo
+Una muestra cuenta como positiva cuando el análisis identificó algún tipo de asbesto (crisotilo, crocidolita, amosita, antofilita). El panel se regenera con `python scripts/graficas-readme.py` a partir de `public/data/`.
 
-```mermaid
-pie showData
-    title "514 muestras ambientales"
-    "Materiales (PLM)" : 232
-    "Polvo superficial (MCV)" : 114
-    "Agua de grifo" : 64
-    "Agua de escorrentía de techos" : 40
-    "Aire" : 36
-    "Agua de tanque" : 28
-```
+</details>
 
-> Las cifras se calculan a partir de los datos publicados en `public/data/`. Una muestra cuenta como positiva cuando el análisis identificó algún tipo de asbesto (crisotilo, crocidolita, amosita, antofilita).
+## Recorrido guiado
+
+<img src="docs/img/recorrido-guiado.jpg" width="100%" alt="Recorrido guiado del geovisor, parada 2 de 6: cubiertas de asbesto-cemento en rojo sobre el mapa de Cartagena, con la tarjeta explicativa y los botones Anterior y Siguiente">
+
+Seis paradas animadas cuentan el estudio de principio a fin:
+1. el contexto de Cartagena;
+2. las cubiertas de asbesto-cemento;
+3. la liberación potencial de fibras;
+4. el polvo superficial en viviendas;
+5. la red de acueducto;
+6. el paso siguiente, hacia los territorios posdesastre.
+
+En cada parada el mapa vuela, se inclina y enciende las capas que corresponden. Se navega con los botones o con las flechas del teclado.
 
 ## Funciones
 
@@ -90,6 +84,7 @@ pie showData
 ## Cómo funciona
 
 ```mermaid
+%%{init: {"theme": "dark", "themeVariables": {"background": "#0d1117", "primaryColor": "#161b22", "primaryBorderColor": "#30363d", "primaryTextColor": "#e6edf3", "lineColor": "#7d8590", "clusterBkg": "#0d1117", "clusterBorder": "#30363d", "fontFamily": "Segoe UI, Helvetica, Arial, sans-serif"}}}%%
 flowchart LR
     subgraph Fuentes
         A1[ArcGIS Online<br/>servicio público]
@@ -112,6 +107,14 @@ flowchart LR
     C1 --> C3
     C2 --> C3
     C3 --> D[(Vercel / Netlify<br/>despliegue automático)]
+    classDef fuente fill:#161b22,stroke:#f0508c,color:#f0508c
+    classDef proceso fill:#161b22,stroke:#c66cf5,color:#c66cf5
+    classDef visor fill:#161b22,stroke:#58a6ff,color:#58a6ff
+    classDef salida fill:#161b22,stroke:#3fb950,color:#3fb950
+    class A1,A2,A3 fuente
+    class B1,B2,B3 proceso
+    class C1,C2,C3 visor
+    class D salida
 ```
 
 ## Desarrollo
@@ -137,10 +140,16 @@ Los GeoTIFF originales (1,5 GB) no se versionan.
 - **Netlify:** el repositorio trae `netlify.toml` (compilación) y `public/_headers` (lectura por rangos de las teselas). Basta con vincular el repositorio desde Netlify.
 - **Paquete listo para subir:** en [Releases](https://github.com/Aikenort26/geovisor-asbesto/releases) está el sitio compilado en un `.zip`, para arrastrar a Netlify Drop o a cualquier hosting estático.
 
+## Actividad del repositorio
+
+<a href="https://ossinsight.io/analyze/Aikenort26/geovisor-asbesto">
+  <img src="https://next.ossinsight.io/widgets/official/compose-activity-trends/thumbnail.png?repo_id=1413385653&image_size=auto&color_scheme=dark" width="100%" alt="Tendencias de actividad del repositorio (OSS Insight)">
+</a>
+
 ## Historial de estrellas
 
 <a href="https://star-history.com/#Aikenort26/geovisor-asbesto&Date">
-  <img src="https://api.star-history.com/svg?repos=Aikenort26/geovisor-asbesto&type=Date" alt="Historial de estrellas del repositorio" width="600">
+  <img src="https://api.star-history.com/svg?repos=Aikenort26/geovisor-asbesto&type=Date&theme=dark" alt="Historial de estrellas del repositorio" width="600">
 </a>
 
 ## Licencia y cita
