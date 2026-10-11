@@ -53,7 +53,7 @@
 
 /* Bloque azul acero de 120 px para Compartir y Exportar (íconos blancos) */
 .encabezado__acciones {
-  flex: 0 0 120px;
+  flex: 0 0 156px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -73,6 +73,7 @@
 .accion:active { background: rgba(255, 255, 255, 0.22); }
 .accion:focus-visible { outline-color: var(--blanco); }
 .accion svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.accion--github svg { fill: currentColor; stroke: none; }
 
 @media (max-width: 760px) {
   .encabezado__rayas { flex-basis: 14px; }
