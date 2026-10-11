@@ -13,6 +13,7 @@
 
 /* Entrada: rayas que se dibujan, título que se asienta, panel que entra */
 .inicio .encabezado__rayas { animation: rayas-dibujar var(--t-lenta) var(--curva) both; }
+.inicio .encabezado__logo { animation: emerger var(--t-lenta) var(--curva) both 60ms; }
 .inicio .encabezado h1 { animation: titulo-entrar 700ms var(--curva) both 120ms; }
 .inicio .encabezado__lugar, .inicio .encabezado__sistema { animation: aparecer var(--t-lenta) var(--curva) both 260ms; }
 .inicio .panel { animation: panel-entrar var(--t-media) var(--curva) both 200ms; }

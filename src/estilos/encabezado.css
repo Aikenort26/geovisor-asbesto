@@ -16,7 +16,8 @@
   border-right: 1px solid var(--rayas);
 }
 
-.encabezado__titulo { padding: 9px 20px; align-self: center; }
+.encabezado__logo { flex: 0 0 40px; width: 40px; height: 40px; align-self: center; margin-left: 16px; }
+.encabezado__titulo { padding: 9px 20px 9px 14px; align-self: center; }
 
 .encabezado__lugar {
   font-size: 10px;
@@ -74,7 +75,8 @@
 .accion svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
 
 @media (max-width: 760px) {
-  .encabezado__rayas { flex-basis: 32px; }
+  .encabezado__rayas { flex-basis: 14px; }
+  .encabezado__logo { flex-basis: 32px; width: 32px; height: 32px; margin-left: 10px; }
   .encabezado__titulo { padding: 8px 12px; }
   .encabezado__titulo { min-width: 0; }
   .encabezado h1 { font-size: 14px; letter-spacing: 1px; white-space: nowrap; }
