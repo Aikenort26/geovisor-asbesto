@@ -142,9 +142,13 @@ Los GeoTIFF originales (1,5 GB) no se versionan.
 
 ## Actividad del repositorio
 
-<a href="https://ossinsight.io/analyze/Aikenort26/geovisor-asbesto">
-  <img src="https://next.ossinsight.io/widgets/official/compose-activity-trends/thumbnail.png?repo_id=1413385653&image_size=auto&color_scheme=dark" width="100%" alt="Tendencias de actividad del repositorio (OSS Insight)">
+<a href="https://github.com/Aikenort26/geovisor-asbesto/commits/main">
+  <img src="docs/img/actividad.svg" width="100%" alt="Actividad del repositorio: commits y días activos en los últimos 28 días, y commits por tipo (funciones, correcciones, documentación, mantenimiento)">
 </a>
+
+[![Commits por mes](https://img.shields.io/github/commit-activity/m/Aikenort26/geovisor-asbesto?label=commits%20por%20mes&color=3fb950&labelColor=14283a)](https://github.com/Aikenort26/geovisor-asbesto/graphs/commit-activity)
+
+La gráfica se regenera con `python scripts/actividad-readme.py` a partir de `git log`.
 
 ## Historial de estrellas
 
