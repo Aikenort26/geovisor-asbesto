@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="160" height="160">
+        <defs><radialGradient id="logo-calor" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#fde725"/><stop offset="0.45" stop-color="#5ec962"/><stop offset="0.75" stop-color="#21918c" stop-opacity="0.7"/><stop offset="1" stop-color="#21918c" stop-opacity="0"/></radialGradient><clipPath id="logo-marco"><rect x="4" y="4" width="112" height="112" rx="8"/></clipPath></defs>
+        <g clip-path="url(#logo-marco)">
+          <rect x="4" y="4" width="112" height="112" fill="#14283a"/>
+          <path d="M4 40L34 36L44 4M34 36L40 116M88 4L84 40L116 46M84 40L40 50M4 100L116 92" fill="none" stroke="#3b5266" stroke-width="2.5"/>
+          <circle cx="60" cy="72" r="30" fill="url(#logo-calor)"/>
+        </g>
+        <g fill="none" stroke="#d9e1e8" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+          <path transform="translate(22 62) rotate(-40.1)" d="M0 0q3.1-4.5 6.2 0t6.2 0t6.2 0t6.2 0t6.2 0t6.2 0t6.2 0t6.2 0"/>
+          <path transform="translate(98 62) scale(-1 1) rotate(-40.1)" d="M0 0q3.1-4.5 6.2 0t6.2 0t6.2 0t6.2 0t6.2 0t6.2 0t6.2 0t6.2 0"/>
+        </g>
+      </svg>
