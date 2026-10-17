@@ -1,6 +1,7 @@
 import './estilos/index.css';
 import * as maplibregl from 'maplibre-gl';
 import type { MapGeoJSONFeature } from 'maplibre-gl';
+import urlWorker from 'maplibre-gl/dist/maplibre-gl-worker.mjs?url';
 import { Protocol } from 'pmtiles';
 import { VISTA_BOLIVAR, VISTA_INICIAL } from './config/tema';
 import { capasPublicas } from './config/privacidad';
@@ -31,6 +32,8 @@ const estadoInicial = decodificarEstado(location.hash);
 const animar = !movimientoReducido() && !estadoInicial;
 
 document.body.classList.add('inicio');
+// MapLibre 6 busca su worker junto al bundle; Vite no lo copia si no se importa.
+maplibregl.setWorkerUrl(urlWorker);
 maplibregl.addProtocol('pmtiles', new Protocol().tile);
 
 const mapa = new maplibregl.Map({
