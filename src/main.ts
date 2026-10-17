@@ -1,5 +1,6 @@
 import './estilos/index.css';
-import maplibregl, { type MapGeoJSONFeature } from 'maplibre-gl';
+import * as maplibregl from 'maplibre-gl';
+import type { MapGeoJSONFeature } from 'maplibre-gl';
 import { Protocol } from 'pmtiles';
 import { VISTA_BOLIVAR, VISTA_INICIAL } from './config/tema';
 import { capasPublicas } from './config/privacidad';

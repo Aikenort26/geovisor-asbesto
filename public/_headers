@@ -1,3 +1,10 @@
+# Cabeceras de seguridad básicas (sin CSP: el mapa carga estilos y teselas externas)
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Frame-Options: SAMEORIGIN
+  Permissions-Policy: camera=(), microphone=()
+
 # Netlify: las teselas PMTiles se leen por rangos de bytes
 /tiles/*
   Accept-Ranges: bytes

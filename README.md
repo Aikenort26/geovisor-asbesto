@@ -160,3 +160,7 @@ La gráfica se regenera con `python scripts/actividad-readme.py` a partir de `gi
 - **Datos:** CC BY 4.0.
 
 **Cita sugerida:** Universidad de Cartagena y FUNDCLAS (2026). *Geovisor Asbesto Cartagena* [aplicación web]. Proyecto BPIN 2020000100366. https://geovisor-asbesto.vercel.app
+
+## Descargo de responsabilidad
+
+El software se entrega "tal cual", sin garantía. El autor no responde por modificaciones, bifurcaciones ni redistribuciones de terceros; cada usuario debe revisar y validar el código y los resultados antes de usarlos. Ver [DESCARGO.md](DESCARGO.md).

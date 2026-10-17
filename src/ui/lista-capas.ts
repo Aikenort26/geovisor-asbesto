@@ -13,7 +13,7 @@ function aplicarOpacidad(mapa: MapaMin, c: Capa, factor: number) {
     const capa = mapa.getLayer(id);
     if (!capa) continue;
     for (const p of propiedadOpacidad(capa.type)) {
-      mapa.setPaintProperty(id, p as never, (OPACIDAD_BASE[`${id}|${p}`] ?? 1) * factor);
+      mapa.setPaintProperty(id, p as never, ((OPACIDAD_BASE[`${id}|${p}`] ?? 1) * factor) as never);
     }
   }
 }
