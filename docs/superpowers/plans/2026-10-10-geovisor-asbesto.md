@@ -65,7 +65,7 @@
 - **Estilo:** sobrio e institucional. Sin emojis, sin degradados llamativos, sin brillos, radio ≤ 4 px.
 - **Animación con propósito:** duraciones entre 150 y 600 ms, `ease-out`. Todo se desactiva con `prefers-reduced-motion: reduce`.
 - **Unidades:** se escribe **s/cm²**, con s minúscula. No se muestran umbrales normativos (por ejemplo 1000 s/cm²) hasta que el higienista lo confirme.
-- **Atribución en pie y "Acerca del geovisor":** "Proyecto BPIN 2020000100366 — Universidad de Cartagena · FUNDCLAS". Los autores se nombran según `afiliaciones_canonicas_autores.xml`; si alguno no está en el catálogo, se pregunta antes.
+- **Atribución en pie y "Acerca del geovisor":** "Proyecto BPIN 2020000100366 — Geovisor Asbesto Cartagena". Los autores se nombran según `afiliaciones_canonicas_autores.xml`; si alguno no está en el catálogo, se pregunta antes.
 - **Muestras:** se muestran por defecto como mapa de calor (`maxzoom` 16, radio creciente). Los puntos originales están disponibles pero apagados. `PUBLICAR_PUNTOS` en `src/config/privacidad.ts` vale `true` por defecto.
 - **Tamaño de archivos:** cada PMTiles ≤ 90 MB (límite de GitHub y Vercel) y cada GeoJSON ≤ 5 MB.
 - **Mapas base:**

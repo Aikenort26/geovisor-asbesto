@@ -15,8 +15,8 @@ export function htmlAcerca(): string {
   return `
     <p>Visor público de la información georreferenciada producida por el proyecto
     <strong>BPIN 2020000100366</strong>, <em>Formulación de una estrategia integral para reducir el impacto sobre la salud
-    pública y ambiental por la presencia de asbesto en el territorio del Departamento de Bolívar</em>, ejecutado por la
-    Universidad de Cartagena con la Fundación Colombia Libre de Asbesto (FUNDCLAS) y financiado por el Sistema General de Regalías.</p>
+    pública y ambiental por la presencia de asbesto en el territorio del Departamento de Bolívar</em>,
+    financiado por el Sistema General de Regalías.</p>
 
     <h3>Qué muestra</h3>
     <ul>
@@ -40,6 +40,6 @@ export function htmlAcerca(): string {
     Datos bajo licencia CC BY 4.0. Mapas base © OpenStreetMap, OpenFreeMap y Esri.</p>
 
     <h3>Cita sugerida</h3>
-    <p class="cita">Universidad de Cartagena y FUNDCLAS (${anio}). <em>Geovisor Asbesto Cartagena</em> [aplicación web].
+    <p class="cita">Proyecto Geovisor Asbesto Cartagena (${anio}). <em>Geovisor Asbesto Cartagena</em> [aplicación web].
     Proyecto BPIN 2020000100366. ${location.origin}</p>`;
 }

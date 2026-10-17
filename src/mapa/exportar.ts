@@ -59,7 +59,7 @@ export async function exportarPNG(mapa: MapaML, activas: Capa[]) {
   });
   ctx.fillStyle = '#3b5266';
   ctx.font = `${px(10.5)}px Segoe UI, Arial, sans-serif`;
-  ctx.fillText('Proyecto BPIN 2020000100366 — Universidad de Cartagena · FUNDCLAS · Mapa base © OpenStreetMap / OpenFreeMap / Esri',
+  ctx.fillText('Proyecto BPIN 2020000100366 — Geovisor Asbesto Cartagena · Mapa base © OpenStreetMap / OpenFreeMap / Esri',
     px(18), y0 + pie - px(12));
 
   const enlace = document.createElement('a');

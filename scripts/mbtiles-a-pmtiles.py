@@ -49,7 +49,7 @@ def desde_xyz(carpeta: Path, destino: Path):
                 "center_lon_e7": int((lon(x0, zmax) + lon(x1, zmax)) / 2 * 1e7),
                 "center_lat_e7": int((lat(y0, zmax) + lat(y1, zmax)) / 2 * 1e7),
             },
-            {"name": destino.stem, "attribution": "Universidad de Cartagena · FUNDCLAS"},
+            {"name": destino.stem, "attribution": "Geovisor Asbesto Cartagena"},
         )
 
 

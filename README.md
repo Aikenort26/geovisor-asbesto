@@ -5,7 +5,7 @@
 # Geovisor Asbesto · Cartagena de Indias
 
 **Visor web público y de código abierto sobre la presencia de asbesto en el entorno urbano de Cartagena**
-Proyecto **BPIN 2020000100366** · Universidad de Cartagena · FUNDCLAS
+Proyecto **BPIN 2020000100366** · Geovisor Asbesto Cartagena
 
 [![Abrir el geovisor](https://img.shields.io/badge/Abrir_el_geovisor-geovisor--asbesto.vercel.app-2f5877?style=for-the-badge&logo=googlemaps&logoColor=white)](https://geovisor-asbesto.vercel.app)
 
@@ -159,7 +159,7 @@ La gráfica se regenera con `python scripts/actividad-readme.py` a partir de `gi
 - **Código:** MIT.
 - **Datos:** CC BY 4.0.
 
-**Cita sugerida:** Universidad de Cartagena y FUNDCLAS (2026). *Geovisor Asbesto Cartagena* [aplicación web]. Proyecto BPIN 2020000100366. https://geovisor-asbesto.vercel.app
+**Cita sugerida:** Proyecto Geovisor Asbesto Cartagena (2026). *Geovisor Asbesto Cartagena* [aplicación web]. Proyecto BPIN 2020000100366. https://geovisor-asbesto.vercel.app
 
 ## Descargo de responsabilidad
 

@@ -40,7 +40,7 @@ const mapa = new maplibregl.Map({
   zoom: estadoInicial?.zoom ?? (animar ? VISTA_BOLIVAR.zoom : VISTA_INICIAL.zoom),
   maxZoom: 18,
   minZoom: 5,
-  attributionControl: { compact: true, customAttribution: 'Proyecto BPIN 2020000100366 · UdC · FUNDCLAS' },
+  attributionControl: { compact: true, customAttribution: 'Proyecto BPIN 2020000100366 · Geovisor Asbesto Cartagena' },
   canvasContextAttributes: { preserveDrawingBuffer: true },
   locale: {
     'NavigationControl.ZoomIn': 'Acercar',
